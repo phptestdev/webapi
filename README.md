@@ -19,7 +19,7 @@ To install project make actions described bellow:
 
 to clone the repository.
 
-6. Go to the **wsapi** directory.
+6. Go to the **webapi** directory.
 
 7. Execute command 
 
