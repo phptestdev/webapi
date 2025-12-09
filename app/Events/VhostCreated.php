@@ -1,0 +1,27 @@
+<?php
+
+namespace App\Events;
+
+use Illuminate\Broadcasting\Channel;
+use Illuminate\Broadcasting\InteractsWithSockets;
+use Illuminate\Broadcasting\PresenceChannel;
+use Illuminate\Broadcasting\PrivateChannel;
+use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
+use Illuminate\Foundation\Events\Dispatchable;
+use Illuminate\Queue\SerializesModels;
+use App\Models\Vhost;
+
+class VhostCreated
+{
+    use Dispatchable, InteractsWithSockets, SerializesModels;
+
+    public $entity;
+
+    /**
+     * Create a new event instance.
+     */
+    public function __construct(Vhost $vhost)
+    {
+        $this->entity = $vhost;
+    }
+}

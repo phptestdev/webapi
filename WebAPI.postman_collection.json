@@ -1,0 +1,401 @@
+{
+	"info": {
+		"_postman_id": "b2ba1156-3cf6-4ba4-ba13-8b1d003e65ed",
+		"name": "WebAPI",
+		"description": "Rest API. Manages webserver & virtual host related actions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13420474"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "phptest4dev@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "qwerty12345",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Test",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/user/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				},
+				"description": "Registers a new user"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "phptest4dev@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Qwerty12345",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/user/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				},
+				"description": "Login an existing user"
+			},
+			"response": []
+		},
+		{
+			"name": "Nginx Start",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|zI0cgroNTGG1OmrxHNakKgMzi3wcJfBwOVPHxPQ56f5487cc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/webserver/start",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"webserver",
+						"start"
+					]
+				},
+				"description": "Starts webserver"
+			},
+			"response": []
+		},
+		{
+			"name": "Nginx Stop",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|zI0cgroNTGG1OmrxHNakKgMzi3wcJfBwOVPHxPQ56f5487cc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/webserver/stop",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"webserver",
+						"stop"
+					]
+				},
+				"description": "Stops webserver"
+			},
+			"response": []
+		},
+		{
+			"name": "Nginx Restart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|zI0cgroNTGG1OmrxHNakKgMzi3wcJfBwOVPHxPQ56f5487cc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/webserver/restart",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"webserver",
+						"restart"
+					]
+				},
+				"description": "Restarts webserver"
+			},
+			"response": []
+		},
+		{
+			"name": "Nginx Reload",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|zI0cgroNTGG1OmrxHNakKgMzi3wcJfBwOVPHxPQ56f5487cc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/webserver/reload",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"webserver",
+						"reload"
+					]
+				},
+				"description": "Reloads webserver"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Virtual Hosts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|zI0cgroNTGG1OmrxHNakKgMzi3wcJfBwOVPHxPQ56f5487cc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/vhosts?page=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vhosts"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Gets virtual host list"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Virtual Host",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|zI0cgroNTGG1OmrxHNakKgMzi3wcJfBwOVPHxPQ56f5487cc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/vhost/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vhost",
+						"2"
+					]
+				},
+				"description": "Gets virtual host's data"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Virtual Host",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|zI0cgroNTGG1OmrxHNakKgMzi3wcJfBwOVPHxPQ56f5487cc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "domain6.local",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/vhost/create",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vhost",
+						"create"
+					]
+				},
+				"description": "Creates new virtual host"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Virtual Host",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|zI0cgroNTGG1OmrxHNakKgMzi3wcJfBwOVPHxPQ56f5487cc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "7",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/vhost/delete",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vhost",
+						"delete"
+					]
+				},
+				"description": "Deletes an existing virtual host"
+			},
+			"response": []
+		}
+	]
+}
