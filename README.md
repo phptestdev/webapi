@@ -21,7 +21,7 @@ to clone the repository.
 
 6. Go to the **webapi** directory.
 
-7. Execute command 
+7. Execute commands 
 
 **sudo docker compose -f compose.prod.yaml up --build -d**
 
@@ -32,6 +32,10 @@ When all containers will be running execute command
 **sudo docker compose -f compose.prod.yaml exec -it php-fpm php /var/www/html/artisan migrate**
 
 to make DB migration.
+
+**sudo chown -R www-data:www-data docker/production/var/www**
+
+**sudo chown -R www-data:www-data docker/production/nginx-hosts/conf.d**
 
 8. Use an API as provided below
 
