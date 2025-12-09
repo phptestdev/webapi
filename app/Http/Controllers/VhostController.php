@@ -165,7 +165,8 @@ class VhostController extends Controller
         ]);
 
         $validator = Validator::make($request->all(), [
-            'id' => 'required|int|min:1'
+            'id' => 'required|int|min:1',
+            'user_id' => 'required'
         ]);
 
         if ($validator->fails()) {
